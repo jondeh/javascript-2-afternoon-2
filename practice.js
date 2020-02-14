@@ -123,7 +123,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray) {
+  evenArray = []
+  oddArray = []
+  for(i = 0; i < numbersArray.length; i++) {
+    if(numbersArray[i] % 2 === 0) {
+      evenArray.push(numbersArray[i])
+    } else {
+      oddArray.push(numbersArray[i])
+    }
+  }
+  
+  return newArray = [evenArray, oddArray] 
+}
 
 
 
@@ -145,8 +157,14 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
-
+function finder(array) {
+  let randomNumber = getRandomArbitrary()
+  for(i = 0; i < array.length; i++) {
+    if(array[i] === randomNumber) {
+      return true 
+    } 
+} return false
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -173,10 +191,39 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   removeItem(myGroceryList) --> [];
   addItem() --> [];
 */
+const emptyArray = []
 
-//Code Here
+function removeItem(myGroceryList, item) {
+  if(myGroceryList && item) {
+    } else {
+      return emptyArray
+    }  
+  for(i = 0; i < myGroceryList.length; i++) {
+    if(myGroceryList[i] == item) {
+      myGroceryList.splice(i, 1)
+    }
+  }
+  return myGroceryList
+}
+
+function addItem(myGroceryList, item) {
+  if(myGroceryList && item) {
+  } else {
+    return emptyArray
+  }  myGroceryList.push(item) 
+    return myGroceryList
+  
+}
 
 
+
+
+// function addItem(myGroceryList, item) {
+//   for(i = 0; i < myGroceryList.length; i++) {
+//     myGroceryList.push(nuItem)
+//   }
+  
+// }
 
 ////////// PROBLEM 9 //////////
 
@@ -184,8 +231,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker() {
+  const newArray = [1]
+  for(i = 0; i < 214; i++) {
+    newArray.push(newArray[i]+1)
+  }
+  return newArray
+}
 
+maker()
 
 
 ////////// PROBLEM 10 //////////
@@ -200,7 +254,16 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+
+
+function addTen(numbers) {
+  const newArray2 = []
+  for(i = 0; i < numbers.length; i++) {
+  newArray2.push(+numbers[i] + 10)
+  }
+  return newArray2
+}
+addTen(numbers)
 
 
 
@@ -225,7 +288,13 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+function longer(arr1, arr2) {
+  if(arr1.length > arr2.length) {
+    return arr1
+  } else {
+    return arr2
+  }
+}
 
 
 
@@ -237,7 +306,17 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2) {
+  const bigArray = []
+  for(let i = 0; i < arr1.length; i++){
+    for(let j = 0; j < arr2.length; j++){
+      if(i === j) {
+        bigArray.push(arr2[j])
+      }
+    }
+  }
+  return bigArray
+}
 
 
 
@@ -278,9 +357,11 @@ var colt = {
   After that, console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+function dmE() {
+  devMountainEmployees.push(joe, ryan, colt)
+}
 
-
+dmE()
 
 /*
   Now let's say Cahlan has to take a leave of absence.
